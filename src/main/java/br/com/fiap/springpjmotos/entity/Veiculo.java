@@ -42,7 +42,7 @@ public class Veiculo {
             referencedColumnName = "ID_TIPO_VEICULO",
             foreignKey = @ForeignKey(name = "FK_TIPO_VEICULO")
     )
-    private Set<TipoVeiculo> tipo = new LinkedHashSet<>();
+    private TipoVeiculo tipo;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JoinTable(
